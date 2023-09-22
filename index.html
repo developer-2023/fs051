@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute starts/ends with value selectors</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        /* ^= attribute starts with value */
+        [class ^= "foo"] {
+            background: lightgreen;
+        }
+        /* $= attribute ends with value */
+        [class $= "test"] {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="foooo123">Lorem ipsum dolor sit amet.</div>
+    <p class="test foo bar">Lorem ipsum dolor sit amet.</p>
+    <p class="_foooo test8">Lorem ipsum dolor sit amet.</p>
+    <p class="fo0 retest">Lorem ipsum dolor sit amet.</p>
+</body>
+</html>
